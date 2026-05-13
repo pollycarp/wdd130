@@ -1,0 +1,86 @@
+/* General styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Main element width limit (as required) */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Profile image inside main (if you have one) */
+main img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* General image styling (all images) */
+img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+/* Aside styling (if you add an aside later) */
+aside {
+    width: 300px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    background-color: #f9f9f9;
+    color: #333;
+    float: right;
+    /* optional, to wrap text */
+}
+
+/* Image inside aside */
+aside img {
+    width: 200px;
+    height: auto;
+}
+
+/* Paragraph padding set to 0 (as required) */
+p {
+    padding: 0;
+}
+
+/* Footer styling: top margin, top border, centered text */
+footer {
+    margin-top: 30px;
+    border-top: 2px solid #ccc;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Headings */
+h1,
+h2 {
+    color: #2c3e66;
+}
+
+/* Links */
+a {
+    color: #1e4a76;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Section spacing */
+section {
+    margin-bottom: 20px;
+}
+
+/* List styling */
+ul {
+    padding-left: 20px;
+}
