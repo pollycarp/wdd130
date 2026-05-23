@@ -1,0 +1,123 @@
+/* CSS Variables – choose your own color scheme */
+:root {
+    --primary-color: #1e3c5c;    /* dark blue for headings */
+    --accent1-color: #f4a261;     /* warm orange for accents */
+    --accent2-color: #2a9d8f;     /* teal for hover states */
+    --body-font: 'Arial', 'Helvetica', sans-serif;
+    --heading-font: 'Georgia', 'Times New Roman', serif;
+}
+
+/* Reset box model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: var(--body-font);
+    color: #333;                   /* high contrast for readability */
+}
+
+/* Limit page width and center content */
+header, main, footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+/* Headings */
+h1, h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+/* Consistent spacing for common elements */
+nav, p, section, article {
+    margin: 16px;
+    padding: 8px;
+}
+
+/* Remove underline from social media links */
+.socialmedia a {
+    text-decoration: none;
+}
+
+/* ---------- Hero styling ---------- */
+.hero {
+    position: relative;
+}
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* H1 overlay on hero image */
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(30, 60, 92, 0.8);  /* semi‑transparent primary color */
+    color: white;
+    padding: 16px;
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Article overlay on hero image */
+.hero article {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.6);  /* dark transparent background */
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+/* Floating image inside the article (happy client) */
+.hero article img {
+    float: right;
+    width: 125px;
+    margin-left: 16px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Clearfix for article – not strictly needed because p will wrap */
+.hero article p {
+    margin: 0;
+}
+
+/* History section styling – optional extra polish */
+section:first-of-type {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+/* Adventure section – empty for now, but styled to match */
+section:last-of-type {
+    margin-bottom: 32px;
+}
+
+/* Footer styling */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-top: 1px solid #ddd;
+}
+footer p {
+    margin: 0;
+}
+.socialmedia img {
+    width: 32px;
+    height: auto;
+    margin-left: 12px;
+}
