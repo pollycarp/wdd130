@@ -1,123 +1,185 @@
-/* CSS Variables – choose your own color scheme */
+/* CSS Variables */
 :root {
-    --primary-color: #1e3c5c;    /* dark blue for headings */
-    --accent1-color: #f4a261;     /* warm orange for accents */
-    --accent2-color: #2a9d8f;     /* teal for hover states */
+    --primary-color: #1e3c5c;
+    --accent1-color: #f4a261;
+    --accent2-color: #2a9d8f;
     --body-font: 'Arial', 'Helvetica', sans-serif;
     --heading-font: 'Georgia', 'Times New Roman', serif;
 }
 
-/* Reset box model */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styling */
 body {
     font-family: var(--body-font);
-    color: #333;                   /* high contrast for readability */
+    color: #333;
 }
 
-/* Limit page width and center content */
-header, main, footer {
+/* Limit page width and center */
+header,
+main,
+footer {
     width: 840px;
     margin: 0 auto;
 }
 
-/* Headings */
-h1, h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
+/* ========== HEADER: CSS GRID ========== */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 2px solid var(--accent1-color);
 }
 
-/* Consistent spacing for common elements */
-nav, p, section, article {
-    margin: 16px;
-    padding: 8px;
+header img {
+    width: 80px;
+    height: auto;
 }
 
-/* Remove underline from social media links */
-.socialmedia a {
+/* ========== NAV: CSS FLEX ========== */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+nav a {
     text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 8px 12px;
 }
 
-/* ---------- Hero styling ---------- */
+nav a:hover {
+    background-color: var(--accent1-color);
+    color: white;
+    border-radius: 4px;
+}
+
+/* ========== HERO SECTION ========== */
 .hero {
     position: relative;
+    margin: 20px 0;
 }
+
 .hero img {
     display: block;
     width: 100%;
     height: auto;
 }
 
-/* H1 overlay on hero image */
 .hero h1 {
     position: absolute;
     top: 20px;
     left: 0;
     width: 100%;
     text-align: center;
-    background-color: rgba(30, 60, 92, 0.8);  /* semi‑transparent primary color */
+    background-color: rgba(30, 60, 92, 0.8);
     color: white;
     padding: 16px;
-    margin: 0;
-    font-size: 2rem;
 }
 
-/* Article overlay on hero image */
 .hero article {
     position: absolute;
     bottom: 30px;
     left: 20px;
     right: 20px;
-    background-color: rgba(0, 0, 0, 0.6);  /* dark transparent background */
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
     padding: 16px;
     border-radius: 8px;
 }
 
-/* Floating image inside the article (happy client) */
 .hero article img {
     float: right;
     width: 125px;
     margin-left: 16px;
-    margin-bottom: 8px;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
-/* Clearfix for article – not strictly needed because p will wrap */
-.hero article p {
+/* ========== HISTORY SECTION ========== */
+.history {
+    margin: 40px 0;
+}
+
+.history h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.history-content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.history-content p {
+    flex: 2;
+    line-height: 1.6;
+}
+
+/* You can add a history image by inserting <img> inside .history-content */
+
+/* ========== ADVENTURES SECTION (5 images) ========== */
+.adventures {
+    margin: 40px 0;
+}
+
+.adventures h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.adventure-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.adventure-grid figure {
     margin: 0;
+    text-align: center;
 }
 
-/* History section styling – optional extra polish */
-section:first-of-type {
-    background-color: #f9f9f9;
+.adventure-grid img {
+    width: 100%;
+    height: auto;
     border-radius: 8px;
 }
 
-/* Adventure section – empty for now, but styled to match */
-section:last-of-type {
-    margin-bottom: 32px;
+.adventure-grid figcaption {
+    margin-top: 8px;
+    font-weight: bold;
+    color: var(--primary-color);
 }
 
-/* Footer styling */
+/* ========== FOOTER ========== */
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 0;
+    padding: 20px 0;
     border-top: 1px solid #ddd;
 }
+
 footer p {
     margin: 0;
 }
+
+.socialmedia {
+    display: flex;
+    gap: 12px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
 .socialmedia img {
     width: 32px;
     height: auto;
-    margin-left: 12px;
 }
