@@ -285,3 +285,12 @@ footer p {
 .contact-form button:hover {
     background-color: #1a2a4a;
 }
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.checkbox-wrapper label {
+    font-weight: normal;
+}

@@ -60,7 +60,7 @@
             </div>
         </section>
 
-        <!-- Contact Form Section -->
+        <!-- Contact Form Section with fixed ids -->
         <section class="contact-form">
             <h2>Send Us a Message</h2>
             <form action="#" method="post">
@@ -72,24 +72,31 @@
 
                 <fieldset>
                     <legend>Purpose of Message</legend>
-                    <label><input type="radio" name="purpose" value="general" required> General Inquiry</label>
-                    <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
-                    <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+                    <label for="purpose_general">
+                        <input type="radio" id="purpose_general" name="purpose" value="general" required> General Inquiry
+                    </label>
+                    <label for="purpose_reservation">
+                        <input type="radio" id="purpose_reservation" name="purpose" value="reservation"> Reservation Question
+                    </label>
+                    <label for="purpose_suggestion">
+                        <input type="radio" id="purpose_suggestion" name="purpose" value="suggestion"> Website Suggestion
+                    </label>
                 </fieldset>
 
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
 
-                <label class="checkbox-label">
-                    <input type="checkbox" name="newsletter" value="subscribe"> Please subscribe me to the monthly newsletter
-                </label>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="newsletter" name="newsletter" value="subscribe">
+                    <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+                </div>
 
                 <button type="submit">Get in Touch!</button>
             </form>
         </section>
     </main>
     <footer>
-        <p>© 2026 Rapid Riders Rafting | Created by Polycarp Kingori</p>
+        <p>© 2025 Rapid Riders Rafting | Created by Polycarp Kingori</p>
         <nav class="socialmedia">
             <a href="https://facebook.com"><img src="images/facebook.svg" alt="Facebook"></a>
             <a href="https://twitter.com"><img src="images/twitter.svg" alt="Twitter"></a>
